@@ -53,7 +53,8 @@ import { createReadMe, createArchive } from './utils.js'
 
 (async () => {
   try {
-    const result = await axios.get("https://www.toutiao.com/hot-event/hot-board/?origin=toutiao_pc&_signature=_02B4Z6wo00101qJwsjQAAIDCInJIdhIJ33aiVLaAAMorht4jcNHUlPjY9LVGJ6NZF12tjXc5KdklK-RZ0m.XvJj-r4WrujlHCYZCxLJY5BeqnHTdFmr11sl065.qqNV2Jz6AYBkJdZJx1xBgVkb1")
+    // const result = await axios.get("https://www.toutiao.com/hot-event/hot-board/?origin=toutiao_pc&_signature=_02B4Z6wo00101qJwsjQAAIDCInJIdhIJ33aiVLaAAMorht4jcNHUlPjY9LVGJ6NZF12tjXc5KdklK-RZ0m.XvJj-r4WrujlHCYZCxLJY5BeqnHTdFmr11sl065.qqNV2Jz6AYBkJdZJx1xBgVkb1")
+    const result = await axios.get("https://sspai.com/api/v1/article/tag/page/get?limit=10&offset=0&created_at=1641703407&tag=%E7%83%AD%E9%97%A8%E6%96%87%E7%AB%A0&released=false")
     console.log('result', result);
     const data = result.data.data
 
