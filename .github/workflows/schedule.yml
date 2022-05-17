@@ -2,7 +2,7 @@ name: schedule
 
 on:
   schedule:
-    - cron: '0/5 * * * *' # 定时执行
+    - cron: '0/5 * * * *' # 定时执行1
 
 jobs:
   build:
