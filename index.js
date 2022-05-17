@@ -59,7 +59,7 @@ import { createReadMe, createArchive } from './utils.js'
 
 (async () => {
   try {
-    const result = await axios.get("https://www.toutiao.com/hot-event/hot-board/?origin=toutiao_pc")
+    const result = await axios.get("https://www.toutiao.com/hot-event/hot-board/?origin=toutiao_pc&_signature=_02B4Z6wo00101qJwsjQAAIDCInJIdhIJ33aiVLaAAMorht4jcNHUlPjY9LVGJ6NZF12tjXc5KdklK-RZ0m.XvJj-r4WrujlHCYZCxLJY5BeqnHTdFmr11sl065.qqNV2Jz6AYBkJdZJx1xBgVkb1")
     console.log('result', result);
     const data = result.data.data
 
