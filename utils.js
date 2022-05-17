@@ -1,7 +1,7 @@
 /*
  * @Author: WangLiShuai
  * @Date: 2022-05-17 11:15:27
- * @LastEditTime: 2022-05-17 13:26:16
+ * @LastEditTime: 2022-05-17 14:57:48
  * @FilePath: \hot-search\toutiao-trending-hout-search\utils.js
  * @Description: 
  */
@@ -27,7 +27,7 @@ export function createReadMe(words) {
 export function createList(words) {
   return `<!-- BEGIN -->
   <!-- 最后更新时间 ${new Date()} -->
-  ${words.map((x, i) => `${i + 1}. [${x.Title}](${x.Url})`)}
+  ${words.map((x, i) => `${i + 1}. [${x.Title}](${x.Url})`).join("\n")}
   <!-- END -->`
 }
 

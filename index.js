@@ -59,7 +59,7 @@ import { createReadMe, createArchive } from './utils.js'
 
 (async () => {
   try {
-    const result = await axios.get('https://www.toutiao.com/hot-event/hot-board/?origin=toutiao_pc')
+    const result = await axios.get("https://www.toutiao.com/hot-event/hot-board/?origin=toutiao_pc")
     console.log('result', result);
     const data = result.data.data
 
@@ -83,5 +83,5 @@ import { createReadMe, createArchive } from './utils.js'
     console.log(e);
   }
 
-})
+})();
 
