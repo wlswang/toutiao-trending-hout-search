@@ -1,5 +1,3 @@
-https://github.com/wlswang/toutiao-trending-hout-search
-
 <!--
  * @Author: WangLiShuai
  * @Date: 2022-05-17 14:08:06
