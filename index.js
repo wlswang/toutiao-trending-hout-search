@@ -45,11 +45,16 @@
 // import dayjs from 'dayjs'
 // import path from 'path'
 // import fs from 'fs'
+// import { createRequire } from 'module';
+// const require = createRequire(import.meta.url);
+import { createRequire } from 'module';
+const require = createRequire(import.meta.url);
 const axios = require('axios')
 const dayjs = require('dayjs');
 const path = require("path");
 const fs = require('fs');
-const { createReadMe, createArchive } = require('./utils');
+// const { createReadMe, createArchive } = require('./utils');
+import { createReadMe, createArchive } from './utils.js'
 // import { mergeArticle, createReadMe, createArchive, createArchive } from './utils.js'
 
 (async () => {
