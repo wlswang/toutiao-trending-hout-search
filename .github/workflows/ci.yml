@@ -24,6 +24,6 @@ jobs:
           startsWith(github.repository, 'wlswang') && 
           startsWith(github.ref, 'refs/tags/')
         env:
-          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+          GITHUB_TOKEN: ${{ secrets.SECRET_KEY }}
         with:
           draft: true

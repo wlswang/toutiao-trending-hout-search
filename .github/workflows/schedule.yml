@@ -26,7 +26,7 @@ jobs:
         run: |
           git config --local user.email "bot@github.com"
           git config --local user.name "bot"
-          git remote set-url origin https://${{ github.actor }}:${{ secrets.GITHUB_TOKEN }}@github.com/${{ github.repository }}
+          git remote set-url origin https://${{ github.actor }}:${{ secrets.SECRET_KEY }}@github.com/${{ github.repository }}
           git pull
           node index.js
           git add .
