@@ -27,8 +27,8 @@ jobs:
           git config --local user.email "bot@github.com"
           git config --local user.name "bot"
           git remote set-url origin https://${{ github.actor }}:${{ secrets.GITHUB_TOKEN }}@github.com/${{ github.repository }}
-          git pull
+          git pull origin master
           node index.js
           git add .
           git commit -m "update by github action"
-          git push
+          git push origin master
