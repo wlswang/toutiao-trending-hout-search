@@ -3,7 +3,7 @@ https://github.com/wlswang/toutiao-trending-hout-search
 <!--
  * @Author: WangLiShuai
  * @Date: 2022-05-17 14:08:06
- * @LastEditTime: 2022-05-17 15:26:10
+ * @LastEditTime: 2022-05-17 15:33:51
  * @FilePath: \hot-search\toutiao-trending-hout-search\README.md
  * @Description:
 -->
@@ -18,7 +18,7 @@ https://github.com/wlswang/toutiao-trending-hout-search
 
 <!-- BEGIN -->
 
-<!-- 最后更新时间 Tue May 17 2022 09:48:50 GMT+0800 (China Standard Time) -->
+1
 
 <!-- END -->
 
