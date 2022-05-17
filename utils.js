@@ -1,14 +1,14 @@
 /*
  * @Author: WangLiShuai
  * @Date: 2022-05-17 11:15:27
- * @LastEditTime: 2022-05-17 15:38:48
+ * @LastEditTime: 2022-05-17 15:51:42
  * @FilePath: \hot-search\toutiao-trending-hout-search\utils.js
  * @Description: 
  */
 
 import fs from 'fs'
 
-function mergeArticle(article, another) {
+export function mergeArticle(article, another) {
   const obj = {}
   for (const a of article.concat(another)) {
     obj[a.url] = a.title
@@ -19,12 +19,12 @@ function mergeArticle(article, another) {
   }))
 }
 
-function createReadMe(words) {
+export function createReadMe(words) {
   const readme = fs.readFileSync('./README.md', 'utf-8')
   return readme.replace(/<!-- BEGIN -->[\W\w]*<!-- END -->/, createList(words))
 }
 
-function createList(words) {
+export function createList(words) {
   return `<!-- BEGIN -->
   <!-- 最后更新时间 ${new Date()} -->
   ${words.map((x, i) => `${i + 1}. [${x.Title}](${x.Url})`).join("\n")}
@@ -32,15 +32,9 @@ function createList(words) {
 }
 
 
-function createArchive(words, date) {
+export function createArchive(words, date) {
   return `# ${date}\n
   共 ${words.length} 条\n
   ${createList(words)}`
 }
 
-module.exports = {
-  mergeArticle,
-  createReadMe,
-  createList,
-  createArchive
-}
