@@ -41,42 +41,73 @@
  * @FilePath: \hot-search\toutiao-trending-hout-search\index.js
  * @Description: 
  */
-import { createRequire } from 'module';
-const require = createRequire(import.meta.url);
-const axios = require('axios')
+// import { createRequire } from 'module';
+// const require = createRequire(import.meta.url);
+// const axios = require('axios')
+// const dayjs = require('dayjs');
+// const path = require("path");
+// const fs = require('fs');
+// // const { createReadMe, createArchive } = require("./utils");
+// import { createReadMe, createArchive } from './utils.js'
+// // import { mergeArticle, createReadMe, createArchive, createArchive } from './utils.js'
+
+// (async () => {
+//   try {
+//     // const result = await axios.get("https://www.toutiao.com/hot-event/hot-board/?origin=toutiao_pc&_signature=_02B4Z6wo00101qJwsjQAAIDCInJIdhIJ33aiVLaAAMorht4jcNHUlPjY9LVGJ6NZF12tjXc5KdklK-RZ0m.XvJj-r4WrujlHCYZCxLJY5BeqnHTdFmr11sl065.qqNV2Jz6AYBkJdZJx1xBgVkb1")
+//     const result = await axios.get("https://sspai.com/api/v1/article/tag/page/get?limit=10&offset=0&created_at=1641703407&tag=%E7%83%AD%E9%97%A8%E6%96%87%E7%AB%A0&released=false")
+//     console.log('result', result);
+//     const data = result.data.data
+
+//     const yyyyMMdd = dayjs().format('YYYY-MM-DD')
+//     const fullPath = path.join('raw', `${yyyyMMdd}.json`)
+
+//     // 保存原始数据
+//     // const queswordsAll = mergeArticle()
+//     fs.writeFileSync(fullPath, JSON.stringify(data))
+
+//     // 更新 README.md
+//     const readme = createReadMe(data)
+//     fs.writeFileSync('./README.md', readme)
+
+//     // 更新 archives
+//     const archiveText = createArchive(data, yyyyMMdd)
+//     const archivePath = path.join('archives', `${yyyyMMdd}.md`)
+//     fs.writeFileSync(archivePath, archiveText)
+
+//   } catch (e) {
+//     console.log(e);
+//   }
+
+// })();
+
+
+const axios = require('axios');
 const dayjs = require('dayjs');
 const path = require("path");
 const fs = require('fs');
-// const { createReadMe, createArchive } = require("./utils");
-import { createReadMe, createArchive } from './utils.js'
-// import { mergeArticle, createReadMe, createArchive, createArchive } from './utils.js'
+const { createReadme, createArchive } = require("./utils");
 
 (async () => {
   try {
-    // const result = await axios.get("https://www.toutiao.com/hot-event/hot-board/?origin=toutiao_pc&_signature=_02B4Z6wo00101qJwsjQAAIDCInJIdhIJ33aiVLaAAMorht4jcNHUlPjY9LVGJ6NZF12tjXc5KdklK-RZ0m.XvJj-r4WrujlHCYZCxLJY5BeqnHTdFmr11sl065.qqNV2Jz6AYBkJdZJx1xBgVkb1")
-    const result = await axios.get("https://sspai.com/api/v1/article/tag/page/get?limit=10&offset=0&created_at=1641703407&tag=%E7%83%AD%E9%97%A8%E6%96%87%E7%AB%A0&released=false")
-    console.log('result', result);
-    const data = result.data.data
+    const result = await axios.get("https://sspai.com/api/v1/article/tag/page/get?limit=10&offset=0&created_at=1641703407&tag=%E7%83%AD%E9%97%A8%E6%96%87%E7%AB%A0&released=false");
+    const data = result.data.data;
 
-    const yyyyMMdd = dayjs().format('YYYY-MM-DD')
-    const fullPath = path.join('raw', `${yyyyMMdd}.json`)
+    const yyyyMMdd = dayjs().format("YYYY-MM-DD");
+    const fullPath = path.join("raw", `${yyyyMMdd}.json`);
 
     // 保存原始数据
-    // const queswordsAll = mergeArticle()
-    fs.writeFileSync(fullPath, JSON.stringify(data))
+    fs.writeFileSync(fullPath, JSON.stringify(data));
 
     // 更新 README.md
-    const readme = createReadMe(data)
-    fs.writeFileSync('./README.md', readme)
+    const readme = createReadme(data);
+    fs.writeFileSync('./README.md', readme);
 
     // 更新 archives
-    const archiveText = createArchive(data, yyyyMMdd)
-    const archivePath = path.join('archives', `${yyyyMMdd}.md`)
-    fs.writeFileSync(archivePath, archiveText)
+    const archiveText = createArchive(data, yyyyMMdd);
+    const archivePath = path.join("archives", `${yyyyMMdd}.md`);
+    fs.writeFileSync(archivePath, archiveText);
 
   } catch (e) {
     console.log(e);
   }
-
 })();
-
