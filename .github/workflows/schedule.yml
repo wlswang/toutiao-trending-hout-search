@@ -2,11 +2,7 @@ name: schedule
 
 on:
   schedule:
-<<<<<<< HEAD
-    - cron: '0/5 * * * * ?\'
-=======
     - cron: '0/5 * * * *' # 定时执行
->>>>>>> e51a198e92cefbf366c28b5e63e4a0892806344e
 
 jobs:
   build:
@@ -31,8 +27,8 @@ jobs:
           git config --local user.email "bot@github.com"
           git config --local user.name "bot"
           git remote set-url origin https://${{ github.actor }}:${{ secrets.GITHUB_TOKEN }}@github.com/${{ github.repository }}
-          git pull origin master
+          git pull
           node index.js
           git add .
           git commit -m "update by github action"
-          git push origin master
+          git push
