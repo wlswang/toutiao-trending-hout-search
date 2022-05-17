@@ -47,8 +47,8 @@ const axios = require('axios')
 const dayjs = require('dayjs');
 const path = require("path");
 const fs = require('fs');
-const { createReadMe, createArchive } = require("./utils");
-// import { createReadMe, createArchive } from './utils.js'
+// const { createReadMe, createArchive } = require("./utils");
+import { createReadMe, createArchive } from './utils.js'
 // import { mergeArticle, createReadMe, createArchive, createArchive } from './utils.js'
 
 (async () => {
