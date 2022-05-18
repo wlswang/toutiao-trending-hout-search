@@ -1,7 +1,7 @@
 /*
  * @Author: WangLiShuai
  * @Date: 2022-05-17 11:15:27
- * @LastEditTime: 2022-05-18 14:31:08
+ * @LastEditTime: 2022-05-18 14:45:17
  * @FilePath: \hot-search\toutiao-trending-hout-search\utils.js
  * @Description: 
  */
@@ -12,11 +12,11 @@ const fs = require('fs');
 function mergeArticle(article, another) {
   const obj = {}
   for (const a of article.concat(another)) {
-    obj[a.Url] = a.Title
+    obj[a.Title] = a.Url
   }
-  return Object.entries(obj).map(([Url, Title]) => ({
-    Url,
-    Title
+  return Object.entries(obj).map(([Title, Url]) => ({
+    Title,
+    Url
   }))
 }
 
