@@ -1,7 +1,8 @@
 name: schedule
 
-on: [push, pull_request] # 当有新 push 时触发
-
+on:
+  schedule:
+    - cron: '30 * * * *'
 
 jobs:
   build:
@@ -11,11 +12,9 @@ jobs:
       TZ: Asia/Shanghai
 
     steps:
-    
-
       - name: Clone repository # 将仓库内 master 分支的内容下载到工作目录
         uses: actions/checkout@v2 # 脚本来自 https://github.com/actions/checkout
-        
+
       - name: run node
         uses: actions/setup-node@v2
         with:
@@ -27,14 +26,12 @@ jobs:
         run: |
           git config --local user.email "121840415@qq.com"
           git config --local user.name "wlswang"  
-          git remote set-url origin https://${{ secrets.SECRET_KEY }}@github.com/wlswang/toutiao-trending-hout-search.git
+          git remote set-url origin https://${{ github.actor }}:${{ secrets.SECRET_KEY }}@github.com/${{ github.repository }}
           git config --local  --list
           git branch
           git pull origin master
           node index.js
           git add .
           git commit -m "update by github action"
-          
+
           git push origin master
-          
-          
