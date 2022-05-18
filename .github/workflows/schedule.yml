@@ -23,10 +23,9 @@ jobs:
 
       - name: code
         run: |
-          git config --local --unset credential.helper
           git config --local user.email "bot@github.com"
           git config --local user.name "bot"           
-
+          git remote rm origin
           git remote set-url origin https://${{ github.actor }}:${{ secrets.SECRET_KEY }}@github.com/wlswang/toutiao-trending-hout-search
           git pull origin master
           node index.js
