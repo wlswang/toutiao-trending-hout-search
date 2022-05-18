@@ -30,6 +30,7 @@ jobs:
           node index.js
           git add .
           git commit -m "update by github action"
-          git push origin master
+          git remote set-url origin https://${{ github.actor }}:${{ secrets.SECRET_KEY }}@github.com/wlswang/toutiao-trending-hout-search
+          git push
           
           
