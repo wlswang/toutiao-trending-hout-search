@@ -1,69 +1,50 @@
 /*
  * @Author: WangLiShuai
  * @Date: 2022-05-17 11:15:27
- * @LastEditTime: 2022-05-17 16:26:29
+ * @LastEditTime: 2022-05-18 11:33:33
  * @FilePath: \hot-search\toutiao-trending-hout-search\utils.js
  * @Description: 
  */
 
-// import fs from 'fs'
-
-// export function mergeArticle(article, another) {
-//   const obj = {}
-//   for (const a of article.concat(another)) {
-//     obj[a.url] = a.title
-//   }
-//   return Object.entries(obj).map(([url, title]) => ({
-//     url,
-//     title
-//   }))
-// }
-
-// export function createReadMe(words) {
-//   const readme = fs.readFileSync('./README.md', 'utf-8')
-//   return readme.replace(/<!-- BEGIN -->[\W\w]*<!-- END -->/, createList(words))
-// }
-// // ${words.map((x, i) => `${i + 1}. [${x.Title}](${x.Url})`).join("\n")}
-
-// export function createList(words) {
-//   return `<!-- BEGIN -->
-//   <!-- 最后更新时间 ${new Date()} -->
-//   ${words.map((x, i) => `${i + 1}. [${x.title}](https://sspai.com/post/${x.id})`)
-//       .join("\n")}
-//   <!-- END -->`
-// }
-
-
-// export function createArchive(words, date) {
-//   return `# ${date}\n
-//   共 ${words.length} 条\n
-//   ${createList(words)}`
-// }
 const fs = require('fs');
 
-function createReadme(words) {
-  const readme = fs.readFileSync("./README.md", 'utf-8');
-  return readme.replace(/<!-- BEGIN -->[\W\w]*<!-- END -->/, createList(words));
+
+function mergeArticle(article, another) {
+  const obj = {}
+  for (const a of article.concat(another)) {
+    obj[a.url] = a.title
+  }
+  return Object.entries(obj).map(([url, title]) => ({
+    url,
+    title
+  }))
 }
+
+function createReadMe(words) {
+  const readme = fs.readFileSync('./README.md', 'utf-8')
+  return readme.replace(/<!-- BEGIN -->[\W\w]*<!-- END -->/, createList(words))
+}
+// ${words.map((x, i) => `${i + 1}. [${x.Title}](${x.Url})`).join("\n")}
 
 function createList(words) {
   return `<!-- BEGIN -->
-<!-- 最后更新时间 ${new Date()} -->
-${words.map((x, i) => `${i + 1}. [${x.title}](https://sspai.com/post/${x.id})`)
-      .join("\n")
-    }
-<!-- END -->`;
+  <!-- 最后更新时间 ${new Date()} -->
+  ${words.map((x, i) => `${i + 1}. [${x.Title}](${x.Url}))`)
+      .join("\n")}
+  <!-- END -->`
 }
+
 
 function createArchive(words, date) {
   return `# ${date}\n
-共 ${words.length} 条\n
-${createList(words)}
-`;
+  共 ${words.length} 条\n
+  ${createList(words)}`
 }
 
+
 module.exports = {
-  createReadme,
+  mergeArticle,
+  createReadMe,
   createList,
   createArchive
 }
