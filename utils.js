@@ -1,7 +1,7 @@
 /*
  * @Author: WangLiShuai
  * @Date: 2022-05-17 11:15:27
- * @LastEditTime: 2022-05-18 13:23:12
+ * @LastEditTime: 2022-05-18 14:23:18
  * @FilePath: \hot-search\toutiao-trending-hout-search\utils.js
  * @Description: 
  */
@@ -14,10 +14,10 @@ function mergeArticle(article, another) {
   for (const a of article.concat(another)) {
     obj[a.Url] = a.Title
   }
-  return Object.entries(obj).map(([Url, Title]) => ({
+  return Object.entries(obj).map(([Url, Title]) => [{
     Url,
     Title
-  }))
+  }])
 }
 
 function createReadMe(words) {

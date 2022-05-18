@@ -55,6 +55,7 @@ const { mergeArticle, createReadMe, createArchive } = require("./utils");
 
     const yyyyMMdd = dayjs().format("YYYY-MM-DD");
     const fullPath = path.join("raw", `${yyyyMMdd}.json`);
+
     let words = []
     words = Array.from(data).map((x) => ({
       Url: x.Url,
