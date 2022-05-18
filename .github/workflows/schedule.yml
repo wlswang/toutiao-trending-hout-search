@@ -22,17 +22,12 @@ jobs:
 
       - run: npm install
 
-      - run: echo "${{ github.actor }}" ${{ github.actor }}
-
-      - run: echo "${{ secrets.SECRET_KEY }}" ${{ secrets.SECRET_KEY }}
-
-      - run: echo "${{ github.repository }}" ${{ github.repository }}
-
       - name: code
         run: |
           git config --local user.email "bot@github.com"
           git config --local user.name "bot"           
-          git remote set-url origin https://${{ github.actor }}:${{ secrets.SECRET_KEY }}@github.com/${{ github.repository }}
+
+          git remote set-url origin https://wlswang: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@github.com/wlswang/toutiao-trending-hout-search.git
           git pull origin master
           node index.js
           git add .
