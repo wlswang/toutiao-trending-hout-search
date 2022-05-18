@@ -55,10 +55,10 @@ const { mergeArticle, createReadMe, createArchive } = require("./utils");
 
     const yyyyMMdd = dayjs().format("YYYY-MM-DD");
     const fullPath = path.join("raw", `${yyyyMMdd}.json`);
-
-    const words = Array.from(data).map((x) => ({
-      url: x.Url,
-      title: x.Title
+    let words = []
+    words = Array.from(data).map((x) => ({
+      Url: x.Url,
+      Title: x.Title
     }))
 
     let wordsAlreadyDownload = [];
