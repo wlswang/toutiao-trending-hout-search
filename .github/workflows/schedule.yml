@@ -23,6 +23,7 @@ jobs:
 
       - name: code
         run: |
+          git config --local --unset credential.helper
           git config --local user.email "bot@github.com"
           git config --local user.name "bot"           
 
@@ -31,7 +32,7 @@ jobs:
           node index.js
           git add .
           git commit -m "update by github action"
-          git config --local --unset credential.helper
+          
           git push
           
           
