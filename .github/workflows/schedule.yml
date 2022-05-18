@@ -1,10 +1,10 @@
 name: schedule
 
-on: [push, pull_request] # 当有新 push 时触发
+# on: [push, pull_request] # 当有新 push 时触发
 
-# on:
-#   schedule:
-#     - cron: '0/5 * * * *'
+on:
+  schedule:
+    - cron: '0/5 * * * *'
 
 jobs:
   build:
@@ -29,7 +29,6 @@ jobs:
           git config --local user.email "121840415@qq.com"
           git config --local user.name "wlswang"  
           git remote set-url origin https://${{ github.actor }}:${{ secrets.SECRET_KEY }}@github.com/${{ github.repository }}
-          git config --local  --list
           git branch
           git pull origin master
           node index.js
