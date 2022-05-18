@@ -1,8 +1,7 @@
 name: schedule
 
-on:
-  schedule:
-    - cron: '0/1 * * * *' # 定时执行11
+on: [push, pull_request] # 当有新 push 时触发
+
 
 jobs:
   build:
