@@ -17,10 +17,7 @@ jobs:
       - name: code1
         run: |
           git clone https://${{ secrets.SECRET_KEY }}@github.com/wlswang/toutiao-trending-hout-search.git
-          git config --local user.email "121840415@qq.com"
-          git config --local user.name "wlswang"  
-          git remote set-url origin https://${{ secrets.SECRET_KEY }}@github.com/wlswang/toutiao-trending-hout-search.git
-          git config --local  --list
+         
 
           
       - name: run node
@@ -32,6 +29,10 @@ jobs:
 
       - name: code
         run: |
+          git config --local user.email "121840415@qq.com"
+          git config --local user.name "wlswang"  
+          # git remote set-url origin https://${{ secrets.SECRET_KEY }}@github.com/wlswang/toutiao-trending-hout-search.git
+          git config --local  --list
           git pull origin master
           node index.js
           git add .
