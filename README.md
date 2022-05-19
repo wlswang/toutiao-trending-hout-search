@@ -10,7 +10,7 @@
 
 [![Build Status](https://github.com/justjavac/weibo-trending-hot-search/workflows/ci/badge.svg?branch=master)](https://github.com/wlswang/toutiao-trending-hout-search/actions) [![license](https://img.shields.io/github/license/wlswang/toutiao-trending-hout-search)](https://github.com/wlswang/toutiao-trending-hout-search/blob/master/LICENSE)
 
-头条热搜榜，记录从 2022-05-18 日开始的头条热榜。每10分钟更新一次数据，按天归档。
+头条热搜榜，记录从 2022-05-18 日开始的头条热榜。每30分钟更新一次数据，按天归档。
 
 今日热门文章
 
