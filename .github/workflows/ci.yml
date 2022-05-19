@@ -1,6 +1,6 @@
 name: ci
 
-on: [push, pull_request] # 当有新 push 时触发
+on: [push] # 当有新 push 时触发
 
 jobs:
   build: # 一项叫做 build 的任务
