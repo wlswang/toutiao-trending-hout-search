@@ -1,0 +1,83 @@
+server:
+    port: 18083
+    servlet:
+        context-path: /api
+spring:
+    application.name: salesnet-be
+    aop.proxy-target-class: true
+    profiles.active: dev
+    jackson:
+        time-zone: GMT+0
+        date-format: yyyy-MM-dd'T'HH:mm:ss'Z'
+        default-property-inclusion: non_null
+        serialization.fail-on-empty-beans: false
+        parser:
+          # 允许接收反斜杠转义的字符
+            ALLOW_BACKSLASH_ESCAPING_ANY_CHARACTER: true
+    datasource:
+        hostname: localhost:3306
+        username: root
+        password: 123456
+        url: jdbc:mysql://${spring.datasource.hostname}/salesnet?allowPublicKeyRetrieval=true&useUnicode=true&useSSL=false&characterEncoding=utf-8
+        initialization-mode: always
+        schema: classpath:sql/*-schema.sql
+        data: classpath:sql/*-data.sql
+    redis:
+        host: localhost
+        port: 6379
+        password: 123456
+    data.redis.repositories.enabled: false
+    servlet.multipart:
+        max-file-size: 30MB
+        max-request-size: 30MB
+mybatis-plus:
+    global-config:
+        db-config:
+            logic-delete-value: 1 # 逻辑已删除值(默认为 1)
+            logic-not-delete-value: 0 # 逻辑未删除值(默认为 0)
+    auto-fill:
+        id-field-name: id  #id填充字段的属性名,在插入时无需手动填入雪花id,框架会自动插入.多个字段使用逗号分隔.
+    type-enums-package: com.gocooll.salesnet.common.constants.enums
+
+logging:
+    config: classpath:log/log4j2-${spring.profiles.active}.xml
+    level:
+      com.gocooll.salesnet: info
+
+account:
+    thirds:
+        weixin.app-id: xxxx
+        weixin.app-secret: xxxx
+
+company:
+    usage:
+        member-capacity-limit: 209715200 # 200MB
+
+aliyun:
+    access.id: LTAI5tD2rzweCkz3ccQev998
+    access.key: ZEBDFSphQvH9xrYcyv3i3sl77g22QA
+oss:
+    common:
+        bucket-name: salesnet-service
+        dir-id-template.logo: 'public/logo/%s'
+        description: 公共
+    company:
+        bucket-name: salesnet-company
+        dir-id-template.public: '%s/public'
+    account:
+        bucket-name: salesnet-service
+        dir-id-template.avatar: 'public/avatar/%s'
+sms:
+    access-key-id: ${aliyun.access.id}
+    access-key-secret: ${aliyun.access.key}
+    sign-name: 鬼谷云科技
+    template:
+        oauth:
+            temp-code: SMS_232166803
+            temp-param: "{\"code\":\"%s\"}"
+            code-length: 4
+            code-expire: 300
+        account_setup:
+            temp-code: SMS_240383202
+            temp-param: "{\"url\":\"index\"}"
+            private-type: true

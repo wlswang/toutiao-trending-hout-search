@@ -1,0 +1,14 @@
+#Mybatis日志输出
+mybatis-plus.configuration.log-impl: org.apache.ibatis.logging.stdout.StdOutImpl
+
+#
+#logging:
+#    level:
+#        root: debug
+#        org:
+#            springframework:
+#                jdbc:
+#                    datasource:
+#                        init: info
+
+#logging.level.org.springframework.data.mongodb.core: DEBUG

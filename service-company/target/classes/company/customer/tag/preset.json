@@ -1,0 +1,80 @@
+[
+  {
+    "typeName": "组织类型",
+    "screen": true,
+    "tagList": [
+      {
+        "tagName": "中小企业"
+      },
+      {
+        "tagName": "大企业"
+      },
+      {
+        "tagName": "事业单位"
+      },
+      {
+        "tagName": "非盈利组织"
+      },
+      {
+        "tagName": "国有企业"
+      },
+      {
+        "tagName": "政府单位"
+      },
+      {
+        "tagName": "民办非企业"
+      },
+      {
+        "tagName": "社会团体"
+      }
+    ]
+  },
+  {
+    "typeName": "意向业务",
+    "screen": true,
+    "tagList": [
+    ]
+  },
+  {
+    "typeName": "行业分类",
+    "screen": true,
+    "tagList": [
+      {
+        "tagName": "IT/互联网"
+      },
+      {
+        "tagName": "出版/广告/传媒/影视"
+      },
+      {
+        "tagName": "医疗/制药/医美"
+      },
+      {
+        "tagName": "教育/培训"
+      },
+      {
+        "tagName": "金融/投资"
+      },
+      {
+        "tagName": "生产/制造"
+      },
+      {
+        "tagName": "房产/建筑"
+      },
+      {
+        "tagName": "网红/自媒体/MCN"
+      },
+      {
+        "tagName": "律师/法务"
+      },
+      {
+        "tagName": "政务/公益"
+      },
+      {
+        "tagName": "自由职业/创业"
+      },
+      {
+        "tagName": "其他行业"
+      }
+    ]
+  }
+]

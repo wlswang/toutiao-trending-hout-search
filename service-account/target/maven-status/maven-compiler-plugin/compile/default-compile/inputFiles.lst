@@ -1,0 +1,12 @@
+/root/workspace/service-account/src/main/java/com/gocooll/salesnet/account/objects/dto/ThirdAccountBindDTO.java
+/root/workspace/service-account/src/main/java/com/gocooll/salesnet/account/controller/ThirdAccountController.java
+/root/workspace/service-account/src/main/java/com/gocooll/salesnet/account/controller/AccountController.java
+/root/workspace/service-account/src/main/java/com/gocooll/salesnet/account/service/impl/AccountServiceImpl.java
+/root/workspace/service-account/src/main/java/com/gocooll/salesnet/account/objects/dto/ThirdCodeDTO.java
+/root/workspace/service-account/src/main/java/com/gocooll/salesnet/account/config/AccountThirdConfig.java
+/root/workspace/service-account/src/main/java/com/gocooll/salesnet/account/objects/dto/AccountProfileDTO.java
+/root/workspace/service-account/src/main/java/com/gocooll/salesnet/account/mapper/AccountMapper.java
+/root/workspace/service-account/src/main/java/com/gocooll/salesnet/account/mapper/ThirdAccountMapper.java
+/root/workspace/service-account/src/main/java/com/gocooll/salesnet/account/service/impl/ThirdAccountServiceImpl.java
+/root/workspace/service-account/src/main/java/com/gocooll/salesnet/account/utils/HttpClientUtil.java
+/root/workspace/service-account/src/main/java/com/gocooll/salesnet/account/config/AccountConfig.java
