@@ -1,2 +1,0 @@
-org.springframework.boot.autoconfigure.EnableAutoConfiguration=\
-com.gocoollframework.mybatisplus.ex.autoconfigure.MybatisPlusExAutoConfiguration
