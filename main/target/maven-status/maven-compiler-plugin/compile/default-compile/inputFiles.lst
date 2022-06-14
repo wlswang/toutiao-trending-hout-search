@@ -1,9 +1,0 @@
-/root/workspace/main/src/main/java/com/gocooll/salesnet/config/FastJson2JsonRedisSerializer.java
-/root/workspace/main/src/main/java/com/gocooll/salesnet/config/RedisConfig.java
-/root/workspace/main/src/main/java/com/gocooll/salesnet/config/security/CompanyResourceGroupService.java
-/root/workspace/main/src/main/java/com/gocooll/salesnet/config/PasswordEncoderConfig.java
-/root/workspace/main/src/main/java/com/gocooll/salesnet/config/database/MybatisConfig.java
-/root/workspace/main/src/main/java/com/gocooll/salesnet/Application.java
-/root/workspace/main/src/main/java/com/gocooll/salesnet/config/database/MyMetaObjectHandler.java
-/root/workspace/main/src/main/java/com/gocooll/salesnet/config/JacksonSerializerConfig.java
-/root/workspace/main/src/main/java/com/gocooll/salesnet/config/database/IdFillInterceptor.java

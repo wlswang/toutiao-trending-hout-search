@@ -1,9 +1,0 @@
-com/gocooll/salesnet/Application.class
-com/gocooll/salesnet/config/JacksonSerializerConfig.class
-com/gocooll/salesnet/config/database/MyMetaObjectHandler.class
-com/gocooll/salesnet/config/RedisConfig.class
-com/gocooll/salesnet/config/database/IdFillInterceptor.class
-com/gocooll/salesnet/config/PasswordEncoderConfig.class
-com/gocooll/salesnet/config/database/MybatisConfig.class
-com/gocooll/salesnet/config/FastJson2JsonRedisSerializer.class
-com/gocooll/salesnet/config/security/CompanyResourceGroupService.class
