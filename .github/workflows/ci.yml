@@ -3,7 +3,7 @@ name: ci
 # on: [push] # 当有新 push 时触发
 on:
   schedule:
-    - cron: '0/5 * * * *' 
+    - cron: '30 * * * *' # 每天每小时30 分钟触发
 
 jobs:
   build: # 一项叫做 build 的任务
